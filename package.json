@@ -1,0 +1,12 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend of Web App RequestFrom",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thanaporn",
+  "license": "ISC",
+  "dependencies": {"express": "^4.19.2"}
+}
