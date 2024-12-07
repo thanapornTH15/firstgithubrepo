@@ -26,6 +26,9 @@
             padding: 10px;
             line-height: 1cm;
         }
+        q {
+            font-style: italic;
+        }
         .f-main {
             text-align: center;
             background-color:whitesmoke;
@@ -49,6 +52,31 @@
             background-color: lightblue;
             color: white;
         }
+        .f-main button{
+            background-color: #04AA6D;
+            border-radius: 10px;
+            border: 2px solid #04AA6D;
+            color: white;
+            padding: 16px 32px;
+            margin: 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .f-main button:hover {
+            background-color: #008151;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px 5px #00ff4899;
+            border: 2px solid #008151;
+        }
+        #hidden1 {
+            display: none;
+            color: #b50000;
+        }
     </style>
 </head>
 
@@ -66,6 +94,12 @@
             <li>1. add css</li>
             <li>2. fix html</li>
         </details>
+        <button onclick="showh1()">1</button>
+        <div id="hidden1">
+            <q>Wait, they don't love you like I love you</q>
+        </div>
+        
     </div>
+    <script></script>
 </body>
 </html>
