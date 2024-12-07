@@ -144,7 +144,7 @@
             border-radius: 20px;
             border: 2px solid #04AA6D;
             color: white;
-            padding: 16px 32px;
+            padding: 16px 30px;
             margin: 20px;
             text-align: center;
             text-decoration: none;
@@ -164,6 +164,18 @@
         #hidden1 {
             display: none;
             color: #1e00b5;
+            cursor: default;
+        }
+        #hidden1 a {
+            text-decoration: none;
+            color: crimson;
+            font-style: italic; 
+            font-size: medium; 
+            font-weight: 100px;
+        }
+        #hidden1 a:hover {
+            color: salmon; /* Changes color on hover */
+            text-decoration: underline; /* Adds underline on hover */
         }
 
 
@@ -185,7 +197,7 @@
             border-radius: 15px;
             border: 2px solid #fff184;
             color: #910000;
-            padding: 16px 32px;
+            padding: 16px 30px;
             text-align: center;
             font-weight: bold;
             display: inline-block;
@@ -203,11 +215,23 @@
             color: lightblue;
             box-shadow: 0px 0px 20px 5px #470081a2;
         }
-        .f-new #hidden2 {
+        #hidden2 {
             display: none;
             color:crimson;
             background-color: ghostwhite;
             border: 5px double #2c2c2c;
+            cursor: default;
+        }
+        #hidden2 a {
+            text-decoration: none;
+            color: #1e00b5;
+            font-style: italic; 
+            font-size: medium; 
+            font-weight: 100px;
+        }
+        #hidden2 a:hover {
+            color: cadetblue; /* Changes color on hover */
+            text-decoration: underline; /* Adds underline on hover */
         }
 
     </style>
@@ -231,6 +255,7 @@
         <button onclick="hidden1()">1</button>
         <div id="hidden1">
             <q>Wait, they don't love you like I love you</q>
+            <p><a href="https://www.youtube.com/watch?v=oIIxlgcuQRU" style="font-style: italic; font-size: medium;">Yeah Yeah Yeahs - Maps</a></p>
         </div>
     </div>
     <div id="winter"></div>
@@ -242,6 +267,8 @@
         <div id="hidden2">
             <q>It's a beautiful lie. It's a perfect denial<br>
             Such a beautiful lie to believe in</q>
+            <p><a href="https://www.youtube.com/watch?v=4Kvd-uquuhI" style="font-style: italic; font-size: medium;">Thirty Seconds to Mars - A Beautiful Lie</a></p>
+
         </div>
     </div>
     <div id="dawn"></div>
