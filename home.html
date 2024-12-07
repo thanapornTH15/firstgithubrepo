@@ -26,6 +26,48 @@
             padding: 10px;
             line-height: 1cm;
         }
+        .f-new {
+            background-color:lightsteelblue;
+            color: white;
+            text-align: center;
+        }
+        .f-new p {
+            font-size: medium;
+            color: aliceblue;
+            line-height: 30px;
+        }
+        .f-new q {
+            font-style: italic;
+        }
+        .f-new button {
+            background-color: #fff184;
+            border-radius: 15px;
+            border: 2px solid #fff184;
+            color: #910000;
+            padding: 16px 32px;
+            text-align: center;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .f-new button:hover {
+            transition-duration: 0.4s;
+            cursor: pointer;
+            background-color: #4f009a;
+            border-radius: 15px;
+            border: 2px solid #4f009a;
+            color: lightblue;
+            box-shadow: 0px 0px 20px 5px #470081a2;
+        }
+        .f-new #hidden2 {
+            display: none;
+            color:crimson;
+            background-color: ghostwhite;
+            border: 1px #000000;
+        }
     </style>
 </head>
 
@@ -34,6 +76,16 @@
         <h1>So, This is test.</h1>
         <p style="text-align: center;">you should add something below</p>
         <p><q>So let's say the feature is to fix the style part and adding more div</q></p>
+    </div>
+    <div class="f-new">
+        <h2 style="margin: 10px;">This is message from feature-new branch</h2>
+        <p>Lorem ipsum odor amet, consectetuer adipiscing elit.<br>
+            Praesent euismod hendrerit dapibus aliquam sapien quam facilisi.</p>
+        <button onclick="hidden2()">2</button>
+        <div id="hidden2">
+            <q>It's a beautiful lie. It's a perfect denial<br>
+            Such a beautiful lie to believe in</q>
+        </div>
     </div>
 </body>
 </html>
