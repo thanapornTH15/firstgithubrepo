@@ -78,10 +78,10 @@
                 background: #4B4376;
             }
             50% {
-                background: #AE445A;
+                background: #9221a1;
             }
             75% {
-                background: #E8BCB9;
+                background: #e8b9e3;
             }
             100% {
                 background: #432E54;
@@ -110,6 +110,31 @@
             }
             100% {
                 background: #F5E8C7;
+            }
+        }
+
+        #dark {
+            width: auto;
+            padding: 0px;
+            margin: 30px;
+            height: 10px;
+            animation: dark 10s infinite;
+        }
+        @keyframes dark {
+            0% {
+                background: #FF204E;
+            }
+            25% {
+                background: #A0153E;
+            }
+            50% {
+                background: #5D0E41;
+            }
+            75% {
+                background: #00224D;
+            }
+            100% {
+                background: #FF204E;
             }
         }
 
@@ -158,7 +183,7 @@
             transition-duration: 0.4s;
             color: #fff184;
             cursor: pointer;
-            box-shadow: 0px 0px 10px 5px #ff00ee99;
+            box-shadow: 0px 0px 20px 5px #ff00ee99;
             border: 2px solid #aa005b;
         }
         #hidden1 {
@@ -177,7 +202,6 @@
             color: salmon; /* Changes color on hover */
             text-decoration: underline; /* Adds underline on hover */
         }
-
 
         .f-new {
             background-color:lightsteelblue;
@@ -234,6 +258,60 @@
             text-decoration: underline; /* Adds underline on hover */
         }
 
+        .f-main2 {
+            text-align: center;
+            background-color:lightgray;
+            width: auto;
+            color: crimson;
+            line-height: 50px;
+        }
+        .f-main2 p {
+            font-size: medium;
+            color: dimgrey;
+            line-height: 30px;
+        }
+        .f-main2 ::selection {
+            background-color: #810000;
+            color: white;
+        }
+        .f-main2 button{
+            background-color: crimson;
+            border-radius: 20px;
+            border: 2px solid crimson;
+            color: white;
+            padding: 16px 32px;
+            margin: 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .f-main2 button:hover {
+            background-color: black;
+            transition-duration: 0.4s;
+            color: gainsboro;
+            cursor: pointer;
+            box-shadow: 0px 0px 20px 5px red;
+            border: 2px solid whitesmoke;
+        }
+        #hidden3 {
+            display: none;
+            color: brown;
+        }
+        #hidden3 a {
+            text-decoration: none;
+            color: gray;
+            font-style: italic; 
+            font-size: medium; 
+            font-weight: 100px;
+        }
+        #hidden3 a:hover {
+            color: red; /* Changes color on hover */
+            text-decoration: underline; /* Adds underline on hover */
+        }
+
     </style>
 </head>
 
@@ -247,7 +325,7 @@
 
     <div class="f-main">
         <h2 style="color: gray;">This is message from feature-main branch</h2>
-        <p style="text-decoration: none; line-height: normal; color: cadetblue;">code:</p><p>1234567890</p>
+        <p style="text-decoration: none; line-height: normal; color: cadetblue;">code:</p><p>6277</p>
         <details style="font-size: 15px; color: darkgray; cursor: pointer;">
             <li>1. add css</li>
             <li>2. fix html</li>
@@ -268,10 +346,24 @@
             <q>It's a beautiful lie. It's a perfect denial<br>
             Such a beautiful lie to believe in</q>
             <p><a href="https://www.youtube.com/watch?v=4Kvd-uquuhI" style="font-style: italic; font-size: medium;">Thirty Seconds to Mars - A Beautiful Lie</a></p>
-
         </div>
     </div>
     <div id="dawn"></div>
+        
+    <div class="f-main2">
+        <h2 style="margin: 10px;">This is message from feature-main branch p.2</h2>
+        <p>There're nothing but despair</p>
+        <button onclick="hidden3()">3</button>
+        <div id="hidden3">
+            <q>And never again, and never again<br>
+                They gave us two shots to the back of the head<br>
+                And we're all dead now</q>
+            <p><a href="https://www.youtube.com/watch?v=RXXi_wCri4w" style="font-style: italic; font-size: medium; font-weight: 100;">My Chemical Romance - I Never Told You What I Do for a Living</a></p>
+        </div>
+    </div>
+
+    <div id="dark"></div>
+
     <script>
         function hidden1() {
             const hidden1 = document.getElementById('hidden1');
@@ -288,6 +380,15 @@
                 hidden2.style.display = 'none'; // Hide the element
             } else {
                 hidden2.style.display = 'block'; // Show the element
+            }
+        }
+
+        function hidden3() {
+            const hidden3 = document.getElementById('hidden3');
+            if (hidden3.style.display === 'block') {
+                hidden3.style.display = 'none'; // Hide the element
+            } else {
+                hidden3.style.display = 'block'; // Show the element
             }
         }
 
