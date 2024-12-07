@@ -8,10 +8,11 @@
             padding: 0;
             font-family: 'Kanit', sans-serif;
             box-sizing: border-box;
+            text-align: center;
         }
         body {
             height: auto;
-            overflow: hidden;
+            overflow:scroll;
             background-color: #ffffff;
         }
         h1 {
@@ -26,6 +27,61 @@
             padding: 10px;
             line-height: 1cm;
         }
+        
+        q {
+            font-style: italic;
+        }
+        .f-main {
+            text-align: center;
+            background-color:lightgoldenrodyellow;
+            width: 100%;
+            color: crimson;
+            line-height: 50px;
+        }
+        .f-main p {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .f-main li {
+            list-style: none;
+            text-decoration: none;
+            line-height: normal;
+            background-color:aliceblue;
+            color: coral;
+            cursor: default;
+        }
+        .f-main ::selection {
+            background-color: lightblue;
+            color: white;
+        }
+        .f-main button{
+            background-color: #04AA6D;
+            border-radius: 20px;
+            border: 2px solid #04AA6D;
+            color: white;
+            padding: 16px 32px;
+            margin: 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .f-main button:hover {
+            background-color: #aa005b;
+            transition-duration: 0.4s;
+            color: #fff184;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px 5px #ff00ee99;
+            border: 2px solid #aa005b;
+        }
+        #hidden1 {
+            display: none;
+            color: #1e00b5;
+        }
+
+
         .f-new {
             background-color:lightsteelblue;
             color: white;
@@ -69,66 +125,15 @@
             border: 5px double #2c2c2c;
         }
 
-
-        q {
-            font-style: italic;
-        }
-        .f-main {
-            text-align: center;
-            background-color:whitesmoke;
-            width: 100%;
-            color: crimson;
-            line-height: 50px;
-        }
-        .f-main p {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .f-main li {
-            list-style: none;
-            text-decoration: none;
-            line-height: normal;
-            background-color:aliceblue;
-            color: coral;
-            cursor: default;
-        }
-        .f-main ::selection {
-            background-color: lightblue;
-            color: white;
-        }
-        .f-main button{
-            background-color: #04AA6D;
-            border-radius: 10px;
-            border: 2px solid #04AA6D;
-            color: white;
-            padding: 16px 32px;
-            margin: 20px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            transition-duration: 0.4s;
-            cursor: pointer;
-        }
-        .f-main button:hover {
-            background-color: #008151;
-            transition-duration: 0.4s;
-            cursor: pointer;
-            box-shadow: 0px 0px 10px 5px #00ff4899;
-            border: 2px solid #008151;
-        }
-        #hidden1 {
-            display: none;
-            color: #b50000;
-        }
     </style>
 </head>
 
 <body>
     <div style="line-height: 1.5cm;">
         <h1>So, This is test.</h1>
-        <p style="text-align: center;">you should add something below</p>
-        <p style="font-size: small; background-color: ghostwhite; font-style: italic; line-height: normal;"><q>So let's say the feature is to fix the style part and adding more div</q></p>
+        <p>you should add something below</p>
+        <p style="font-size: small; background-color: #f5f5f5; font-style: italic; line-height: normal; color: grey;"><q>So let's say the feature is to fix the style part and adding more div</q></p>
+        <div></div>
     </div>
     <div class="f-main">
         <h2 style="color: gray;">This is message from feature-main branch</h2>
@@ -137,7 +142,7 @@
             <li>1. add css</li>
             <li>2. fix html</li>
         </details>
-        <button onclick="showh1()">1</button>
+        <button onclick="hidden1()">1</button>
         <div id="hidden1">
             <q>Wait, they don't love you like I love you</q>
         </div>
@@ -154,6 +159,15 @@
         </div>
     </div>
     <script>
+        function hidden1() {
+            const hidden1 = document.getElementById('hidden1');
+            if (hidden1.style.display === 'block') {
+                hidden1.style.display = 'none'; // Hide the element
+            } else {
+                hidden1.style.display = 'block'; // Show the element
+            }
+        }
+
         function hidden2() {
             const hidden2 = document.getElementById('hidden2');
             if (hidden2.style.display === 'block') {
@@ -162,6 +176,7 @@
                 hidden2.style.display = 'block'; // Show the element
             }
         }
+
     </script>
 </body>
 </html>
