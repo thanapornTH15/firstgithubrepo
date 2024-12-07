@@ -1,3 +1,4 @@
+Hello this is my...
 # Master branch for testing git version control  
 This will be the baseline branch for simulating git version control scenarios. The branches that should be branched out are:  
 > - Master (default/baseline code)
